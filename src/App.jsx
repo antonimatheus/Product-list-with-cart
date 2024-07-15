@@ -1,43 +1,42 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import Dessert from './Dessert'
+// src/App.js
+import { useEffect, useState } from 'react';
+import './App.css';
+import Dessert from './Dessert.jsx';
+import data from './data.js';
 
 function App() {
+    const [desserts, setDesserts] = useState([]);
 
-const [desserts, setDesserts] = useState([])
+    useEffect(() => {
+        // Simula uma chamada de API para buscar dados JSON
+        const fetchData = async () => {
+            // Dados são importados do arquivo data.js
+            setDesserts(data);
+        }
 
-// Simula uma chamada de API para buscar dados JSON
-useEffect(() => {
-  const fetchData = async () => {
-    // Supondo que você tenha um arquivo JSON em public/data.json
-    const response = await fetch('./data.json');
-    const data = await response.json();
-    setDesserts(data)
-  }
-  
-  fetchData()
-}, [])
+        fetchData();
+    }, []);
 
-  return (
-    <div className='container'>
-      <main className='app--Container'>
-        <h1>Desserts</h1>
+    return (
+        <div className='container'>
+            <main className='app--Container'>
+                <h1>Desserts</h1>
 
-        {desserts.map((dessert, index) =>(
-            <Dessert
-              key={index}
-              image={dessert.image}
-              category={dessert.category}
-              name={dessert.name}
-              price={dessert.price}
-            />
-        ))}
-      </main>
-      <aside>
-        Your Cart
-      </aside>
-    </div>
-  )
+                {desserts.map((dessert, index) => (
+                    <Dessert
+                        key={index}
+                        image={dessert.image}
+                        category={dessert.category}
+                        name={dessert.name}
+                        price={dessert.price}
+                    />
+                ))}
+            </main>
+            <aside>
+                Your Cart
+            </aside>
+        </div>
+    );
 }
 
-export default App
+export default App;
