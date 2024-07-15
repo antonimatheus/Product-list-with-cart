@@ -18,9 +18,9 @@
 
   Desserts
 
-  Waffle with Berries
-  Waffle
-  6.50
+  
+  
+  
   Add to Cart
 
   Vanilla Bean Crème Brûlée
