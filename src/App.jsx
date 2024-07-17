@@ -32,7 +32,7 @@ function App() {
                     />
                 ))}
             </main>
-            <aside>
+            <aside className='Cart'>
                 Your Cart
             </aside>
         </div>

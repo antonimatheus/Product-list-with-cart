@@ -2,16 +2,16 @@
 import React from 'react';
 import '../src/Dessert.css'
 
+import cart from "./assets/images/icon-add-to-cart.svg"
+
 const Dessert = ({ name, category, price, image }) => {
     return (
-        <div className="dessert--Container">
-            <div className='dessert--Card'>
-                <img src={image.desktop} alt={name} />
-                <button>Add to Cart</button>
-                <h2>{name}</h2>
-                <p>{category}</p>
-                <p>${price.toFixed(2)}</p>
-            </div>
+        <div className='dessert--Card'>
+            <img src={image.desktop} alt={name} />
+            <button> <img src={cart} alt="cart" /> Add to Cart</button>
+            <p>{category}</p>
+            <h2>{name}</h2>
+            <h4>${price.toFixed(2)}</h4>
         </div>
     );
 };

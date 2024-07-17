@@ -30,21 +30,36 @@
 body {
   width: 100vw;
   height: 100vh;
+  background-color: var(--Rose100);
 }
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .app--Container {
   display: flex;
-  flex-direction: column;
-  width: 60vw;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 3px;
+  width: 65vw;
 }
 
 .app--Container h1 {
   font-size: 40px;
   font-weight: 700;
   padding: 10px;
+  width: 100%;
+  color: var(--Rose900);
+}
+
+/*  Cart  */
+
+.Cart {
+  width: 35vw;
+  height: 100px;
+  background-color: var(--Rose50);
+  border-radius: 10px;
 }
