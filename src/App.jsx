@@ -1,8 +1,9 @@
 // src/App.js
 import { useEffect, useState } from 'react';
 import './App.css';
-import Dessert from './Dessert.jsx';
-import data from './data.js';
+import data from './mainContent/data.js';
+import Dessert from './mainContent/Dessert.jsx';
+import Cart from './mainContent/Cart.jsx';
 
 function App() {
     const [desserts, setDesserts] = useState([]);
@@ -33,7 +34,7 @@ function App() {
                 ))}
             </main>
             <aside className='Cart'>
-                Your Cart
+                <Cart/>
             </aside>
         </div>
     );

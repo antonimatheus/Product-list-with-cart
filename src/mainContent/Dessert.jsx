@@ -1,8 +1,8 @@
 // Dessert.js
 import React from 'react';
-import '../src/Dessert.css'
+import '../mainContent/Dessert.css'
 
-import cart from "./assets/images/icon-add-to-cart.svg"
+import cart from "../assets/images/icon-add-to-cart.svg"
 
 const Dessert = ({ name, category, price, image }) => {
     return (

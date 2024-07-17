@@ -11,17 +11,18 @@
 }
 
 .dessert--Card p {
+    font-size: 15px;
     color: var(--Rose500);
 }
 
 .dessert--Card h2 {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .dessert--Card h4 {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     color: var(--Red);
 }
 
@@ -41,7 +42,7 @@
     align-items: center;
     width: 55%;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 12px;
     border: none;
     outline: 1px solid var(--Rose500);
