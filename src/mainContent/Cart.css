@@ -1,5 +1,134 @@
 @charset "UTF-8";
 
-h1 {
-    color: red;
+.cart--Title h1 {
+    color: var(--Red);
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.cart--Order {
+    display: flex;
+   /* background-color: red;*/
+}
+
+.cart--Order--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    /*background-color: green;*/
+    width: 90%;
+}
+
+.cart--Order--h1 h2{
+    color: var(--Rose900);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.cart--Order--quantity {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.cart--Order--quantityh3 h3 {
+    color: var(--Red);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.cart--Order--quantity p {
+    color: var(--Rose500);
+}
+
+.cart--Order--quantityp p {
+    font-weight: 400;
+}
+
+.cart--Order--quantitym p {
+    font-weight: 600;
+}
+
+.cart--Order--delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    cursor: pointer;
+    /* background-color: blue;*/
+}
+
+.cart--Order--delete img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border: 1px solid var(--Rose300);
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.cart--Order--delete img:hover {
+    border-color: var(--Rose900);
+}
+
+.cart--Line span {
+    content: '';
+    border-bottom: 1px solid var(--Rose900);
+    width: 90%;
+    top: 43%;
+    background-color: gray;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cart--Total {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart--Total h2 {
+    font-weight: 700;
+}
+
+.cart--Text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 5px;
+    background-color: var(--Rose100);
+}
+
+.cart--Text span {
+    font-weight: 600;
+}
+
+.cart--Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart--Button button {
+    width: 80%;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    color: var(--Rose50);
+    background-color: var(--Red);
+    transition: .4s;
+    cursor: pointer;
+}
+
+.cart--Button button:hover {
+    background-color: hsl(14, 84%, 32%);
 }
