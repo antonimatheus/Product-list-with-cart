@@ -16,7 +16,6 @@
   /*Font*/
 
   --fontRed: "Red Hat Text", sans-serif; /* Weights: 400, 600, 700 */
-
 }
 
 * {
@@ -28,6 +27,8 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   background-color: var(--Rose100);
@@ -38,6 +39,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  gap: 20px;
 }
 
 .app--Container {
@@ -62,7 +64,7 @@ body {
 .Cart {
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: 25vw;
   height: 100%;
   background-color: var(--Rose50);
   border-radius: 10px;

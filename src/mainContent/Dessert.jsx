@@ -1,14 +1,12 @@
-// Dessert.js
 import React from 'react';
-import '../mainContent/Dessert.css'
-
-import cart from "../assets/images/icon-add-to-cart.svg"
+import '../mainContent/Dessert.css';
+import SetToCart from './SetToCart';
 
 const Dessert = ({ name, category, price, image }) => {
     return (
         <div className='dessert--Card'>
             <img src={image.desktop} alt={name} />
-            <button> <img src={cart} alt="cart" /> Add to Cart</button>
+            <SetToCart />
             <p>{category}</p>
             <h2>{name}</h2>
             <h4>${price.toFixed(2)}</h4>

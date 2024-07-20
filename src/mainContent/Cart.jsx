@@ -49,7 +49,9 @@ function Cart() {
             </div>
             
             <div className="cart--Button">
-                <button>Confirm Order</button>
+                <button>
+                    Confirm Order
+                </button>
             </div>
         </>
     )
