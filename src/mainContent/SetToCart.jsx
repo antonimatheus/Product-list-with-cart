@@ -25,17 +25,17 @@ function SetToCart() {
     };
 
     return (
-        <div>
+        <div className="dessert--CardButton">
             {addedToCart ? (
                 <button className="cart--Button--quantity">
-                    <div>
-                        <div onClick={handleDecrease}><img src={minus} alt="minus" /></div>
-                        <span>{quantity}</span>
-                        <div onClick={handleIncrease}><img src={plus} alt="plus" /></div>
+                    <div onClick={handleDecrease} className="cart--Button--quantityMinus">
+                        <img src={minus} alt="minus"/>
                     </div>
+                    <div>{quantity}</div>
+                    <div onClick={handleIncrease}><img src={plus} alt="plus" className="cart--Button--quantityPlus" /></div>
                 </button>
             ) : (
-                <button onClick={handleClick}>
+                <button onClick={handleClick} className="cart--Button--add">
                     <img src={cart} alt="cart" /> Add to Cart
                 </button>
             )}
