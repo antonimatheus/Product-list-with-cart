@@ -69,5 +69,10 @@ body {
   background-color: var(--Rose50);
   border-radius: 10px;
   padding: 20px;
+}
+
+.Cart > div {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }

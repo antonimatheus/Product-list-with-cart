@@ -1,36 +1,40 @@
-import React, { useState } from "react";
+// src/mainContent/SetToCart.jsx
+import React, { useState, useEffect } from "react";
 import cart from "../assets/images/icon-add-to-cart.svg";
 import "./Dessert.css";
 
-function SetToCart({ name, price, addToCart }) {
-    // Estado para rastrear se o item foi adicionado ao carrinho
+function SetToCart({ name, price, addToCart, removeFromCart, cartItems }) {
     const [addedToCart, setAddedToCart] = useState(false);
-    // Estado para rastrear a quantidade do item
     const [quantity, setQuantity] = useState(1);
 
-    // Função para lidar com o clique do botão de adicionar ao carrinho
+    useEffect(() => {
+        const itemInCart = cartItems.find(item => item.name === name);
+        if (itemInCart) {
+            setAddedToCart(true);
+            setQuantity(itemInCart.quantity);
+        } else {
+            setAddedToCart(false);
+            setQuantity(1);
+        }
+    }, [cartItems, name]);
+
     const handleClick = () => {
         if (!addedToCart) {
             setAddedToCart(true);
-            // Adiciona o item ao carrinho com a quantidade atual
             addToCart({ name, price, quantity });
         }
     };
 
-    // Função para incrementar a quantidade
     const handleIncrease = () => {
         const newQuantity = quantity + 1;
         setQuantity(newQuantity);
-        // Atualiza a quantidade do item no carrinho
         addToCart({ name, price, quantity: newQuantity });
     };
 
-    // Função para decrementar a quantidade
     const handleDecrease = () => {
         if (quantity > 1) {
             const newQuantity = quantity - 1;
             setQuantity(newQuantity);
-            // Atualiza a quantidade do item no carrinho
             addToCart({ name, price, quantity: newQuantity });
         }
     };

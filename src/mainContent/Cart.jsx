@@ -1,33 +1,34 @@
-import React from "react"; // Importa a biblioteca React
-import "./Cart.css"; // Importa os estilos para o carrinho
+// src/mainContent/Cart.jsx
+import React from "react";
+import "./Cart.css";
+import removeItem from "../assets/images/icon-remove-item.svg";
+import carbonNeutral from "../assets/images/icon-carbon-neutral.svg";
+import emptyCart from "../assets/images/illustration-empty-cart.svg";
 
-import removeItem from "../assets/images/icon-remove-item.svg"; // Ícone para remover item
-import carbonNeutral from "../assets/images/icon-carbon-neutral.svg"; // Ícone de entrega neutra em carbono
-import emptyCart from "../assets/images/illustration-empty-cart.svg"; // Ilustração para carrinho vazio
-
-function Cart({ cartItems, removeFromCart }) { // Componente Cart que recebe os itens do carrinho e a função de remover item como props
+function Cart({ cartItems, removeFromCart }) {
     // Função para calcular o total do pedido
     const calculateTotal = () => {
-        // Reduz os itens do carrinho a um total acumulado multiplicando preço pela quantidade de cada item
         return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
     };
 
     return (
-        <>
-            {cartItems.length === 0 ? ( // Verifica se o carrinho está vazio
-                // Renderiza a imagem do carrinho vazio e uma mensagem
+        <div className="cart">
+            {cartItems.length === 0 ? ( 
                 <>
+                    {/*Exibe uma mensagem e uma imagem quando o carrinho está vazio*/} 
                     <div className="cart--Title">
-                            {/* Exibe a quantidade total de itens no carrinho */}
-                            <h1>Your Cart ({cartItems.reduce((acc, item) => acc + item.quantity, 0)})</h1>
-                        </div>
+                        {/* Exibe a quantidade total de itens no carrinho */}
+                        <h1>Your Cart ({cartItems.reduce((acc, item) => acc + item.quantity, 0)})</h1>
+                    </div>
+
+                   
                     <div className="cart--Empty">
                         <img src={emptyCart} alt="Empty Cart" />
                         <p>Your added item will appear here</p>
                     </div>
                 </>
                 
-            ) : ( // Se o carrinho não estiver vazio, renderiza os itens do carrinho
+            ) : (
                 <>
                     <div className="cart--Title">
                         {/* Exibe a quantidade total de itens no carrinho */}
@@ -82,8 +83,8 @@ function Cart({ cartItems, removeFromCart }) { // Componente Cart que recebe os 
                     </div>
                 </>
             )}
-        </>
+        </div>
     );
 }
 
-export default Cart; // Exporta o componente Cart
+export default Cart;
