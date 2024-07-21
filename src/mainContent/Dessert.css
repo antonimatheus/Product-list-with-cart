@@ -80,25 +80,21 @@
     outline: none;
 }
 
-.cart--Button--quantityMinus {
+.cart--Button--quantityMinus i, .cart--Button--quantityPlus i {
     display: flex;
+    font-size: 12px;
+    outline: 1px solid var(--Rose50);
+    border-radius: 50%;
+    padding: 3px;
+    background-color: var(--Red);
+    transition: .4s;
 }
 
-.dessert--CardButton > .cart--Button--quantity img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.cart--Button--quantityMinus i:hover, .cart--Button--quantityPlus i:hover {
+    background-color: var(--Rose50);
+    color: var(--Red);
 }
-
-
 
 .dessert--CardButton > .cart--Button--quantity div {
     color: var(--Rose50);
-}
-
-.dessert--CardButton > .cart--Button--quantity
-
-.cart--Button--quantity div span {
-    color: var(--Red);
 }

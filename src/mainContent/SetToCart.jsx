@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import cart from "../assets/images/icon-add-to-cart.svg";
-
-import plus from '../assets/images/icon-increment-quantity.svg'
-import minus from '../assets/images/icon-decrement-quantity.svg'
-
 import "./Dessert.css"
 
 function SetToCart() {
@@ -29,10 +25,14 @@ function SetToCart() {
             {addedToCart ? (
                 <button className="cart--Button--quantity">
                     <div onClick={handleDecrease} className="cart--Button--quantityMinus">
-                        <img src={minus} alt="minus"/>
+                        <i class="fa-solid fa-minus"></i>
                     </div>
-                    <div>{quantity}</div>
-                    <div onClick={handleIncrease}><img src={plus} alt="plus" className="cart--Button--quantityPlus" /></div>
+                    <div>
+                        {quantity}
+                    </div>
+                    <div onClick={handleIncrease} className="cart--Button--quantityPlus">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
                 </button>
             ) : (
                 <button onClick={handleClick} className="cart--Button--add">
