@@ -1,4 +1,3 @@
-// src/mainContent/Dessert.jsx
 import React from 'react';
 import '../mainContent/Dessert.css';
 import SetToCart from './SetToCart';
@@ -13,6 +12,7 @@ const Dessert = ({ name, category, price, image, addToCart, cartItems, removeFro
                 addToCart={addToCart} 
                 cartItems={cartItems} 
                 removeFromCart={removeFromCart}
+                image={image} // Passe a imagem para SetToCart
             />
             <p>{category}</p>
             <h2>{name}</h2>

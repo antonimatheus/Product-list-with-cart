@@ -1,33 +1,40 @@
 // src/mainContent/Cart.jsx
-import React from "react";
+import React, { useState } from "react";
 import "./Cart.css";
 import removeItem from "../assets/images/icon-remove-item.svg";
 import carbonNeutral from "../assets/images/icon-carbon-neutral.svg";
 import emptyCart from "../assets/images/illustration-empty-cart.svg";
+import OrderConfirmed from "./OrderConfirmed";
 
 function Cart({ cartItems, removeFromCart }) {
+    const [orderConfirmed, setOrderConfirmed] = useState(false);
+
     // Função para calcular o total do pedido
     const calculateTotal = () => {
         return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
     };
 
+    const handleConfirmOrder = () => {
+        setOrderConfirmed(true);
+    };
+
+    if (orderConfirmed) {
+        return <OrderConfirmed cartItems={cartItems} />;
+    }
+
     return (
         <div className="cart">
-            {cartItems.length === 0 ? ( 
-                <>
-                    {/*Exibe uma mensagem e uma imagem quando o carrinho está vazio*/} 
+            {cartItems.length === 0 ? (
+                <div>
                     <div className="cart--Title">
-                        {/* Exibe a quantidade total de itens no carrinho */}
-                        <h1>Your Cart ({cartItems.reduce((acc, item) => acc + item.quantity, 0)})</h1>
-                    </div>
-
-                   
+                    {/* Exibe a quantidade total de itens no carrinho */}
+                    <h1>Your Cart ({cartItems.reduce((acc, item) => acc + item.quantity, 0)})</h1>
+                     </div>
                     <div className="cart--Empty">
                         <img src={emptyCart} alt="Empty Cart" />
                         <p>Your added item will appear here</p>
                     </div>
-                </>
-                
+                </div>
             ) : (
                 <>
                     <div className="cart--Title">
@@ -77,7 +84,7 @@ function Cart({ cartItems, removeFromCart }) {
                     </div>
 
                     <div className="cart--Button">
-                        <button>
+                        <button onClick={handleConfirmOrder}>
                             Confirm Order
                         </button>
                     </div>

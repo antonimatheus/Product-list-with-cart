@@ -1,9 +1,8 @@
-// src/mainContent/SetToCart.jsx
 import React, { useState, useEffect } from "react";
 import cart from "../assets/images/icon-add-to-cart.svg";
 import "./Dessert.css";
 
-function SetToCart({ name, price, addToCart, removeFromCart, cartItems }) {
+function SetToCart({ name, price, addToCart, removeFromCart, cartItems, image }) {
     const [addedToCart, setAddedToCart] = useState(false);
     const [quantity, setQuantity] = useState(1);
 
@@ -21,21 +20,21 @@ function SetToCart({ name, price, addToCart, removeFromCart, cartItems }) {
     const handleClick = () => {
         if (!addedToCart) {
             setAddedToCart(true);
-            addToCart({ name, price, quantity });
+            addToCart({ name, price, quantity, image });
         }
     };
 
     const handleIncrease = () => {
         const newQuantity = quantity + 1;
         setQuantity(newQuantity);
-        addToCart({ name, price, quantity: newQuantity });
+        addToCart({ name, price, quantity: newQuantity, image });
     };
 
     const handleDecrease = () => {
         if (quantity > 1) {
             const newQuantity = quantity - 1;
             setQuantity(newQuantity);
-            addToCart({ name, price, quantity: newQuantity });
+            addToCart({ name, price, quantity: newQuantity, image });
         }
     };
 
