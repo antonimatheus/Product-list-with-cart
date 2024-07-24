@@ -64,7 +64,7 @@ body {
 .Cart {
   display: flex;
   flex-direction: column;
-  width: 25vw;
+  width: 30vw;
   height: 100%;
   background-color: var(--Rose50);
   border-radius: 10px;

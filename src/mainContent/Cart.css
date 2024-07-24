@@ -81,8 +81,7 @@
     padding: 3px;
     border: 1px solid var(--Rose300);
     border-radius: 50%;
-    transition: .4s;
-    
+    transition: .4s
 }
 
 .cart--Order--delete img:hover {
@@ -150,14 +149,14 @@
 /*  Order Confirmed  */
 
 .order-confirmed {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     background-color: var(--Rose50);
-    width: 35%;
+    width: 50%;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.7);
@@ -170,6 +169,50 @@
 .order-confirmed h1 {
     font-weight: 700;
     font-size: 35px;
+}
+
+.cart--OrderConfirmed {
+    display: flex;
+    flex-direction: column;
+   /* background-color: red;*/
+}
+
+.cart--Order--infoConfirmed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--Rose100);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.cart--Order--infoConfirmed div {
+    padding: 5px;
+}
+
+.cart--Order--infoConfirmed img {
+    width: 60%;
+    border-radius: 10px;
+}
+
+.cart--Order--infoConfirmedIMGLIST {
+    display: flex;
+    align-items: center;
+    width: 85%;
+}
+
+.cart--Total--confirmed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--Rose100);
+}
+
+.cart--Total--confirmed h2 {
+    font-weight: 700;
 }
 
 .order-confirmed button {
