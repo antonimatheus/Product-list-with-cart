@@ -58,7 +58,9 @@ body {
   color: var(--Rose900);
 }
 
+
 /*  Cart  */
+
 
 .Cart {
   display: flex;
@@ -95,7 +97,6 @@ body {
 
   .Cart {
     position: relative;
-    width: 70vw;
+    width: 80vw;
   }
 }
-
