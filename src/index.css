@@ -94,8 +94,8 @@ body {
   }
 
   .Cart {
+    position: relative;
     width: 70vw;
   }
-
 }
 
