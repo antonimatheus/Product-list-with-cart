@@ -33,13 +33,15 @@ body {
   height: 100vh;
   background-color: var(--Rose100);
   color: var(--Rose900);
+  padding: 30px;
 }
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
-  gap: 20px;
+  width: 85vw;
+ /* background-color: red;*/
 }
 
 .app--Container {
@@ -47,7 +49,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 60vw;
+  width: 55vw;
 }
 
 .app--Container h1 {
